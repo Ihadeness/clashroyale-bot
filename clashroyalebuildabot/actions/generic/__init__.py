@@ -1,0 +1,1 @@
+"""Mock generic actions for testing."""
