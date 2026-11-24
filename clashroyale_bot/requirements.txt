@@ -1,0 +1,20 @@
+# Clash Royale Bot - 2.6 Hog Cycle
+# Pinned versions tested on Ryzen 5 5500U (Windows 10/11)
+
+# Core dependencies
+onnxruntime-directml==1.18.0
+opencv-python==4.9.0.80
+PyQt6==6.6.1
+loguru==0.7.2
+pydantic==2.5.3
+PyYAML==6.0.1
+requests==2.31.0
+Pillow==10.1.0
+numpy==1.26.2
+
+# Development dependencies
+pytest==7.4.3
+pytest-mock==3.12.0
+
+# Original package (install from local or git)
+# clashroyalebuildabot @ git+https://github.com/Pbatch/ClashRoyaleBuildABot.git

@@ -1,0 +1,1 @@
+"""Mock detectors module for testing."""
