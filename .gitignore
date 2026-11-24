@@ -1,0 +1,106 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Project specific
+platform-tools/
+data/
+benchmark_results.json
+app.log
+*.log
+
+# Personal/System files (Windows user directory)
+AppData/
+Local/
+Roaming/
+Desktop/
+Documents/
+Downloads/
+Music/
+Pictures/
+Videos/
+Contacts/
+Favorites/
+Links/
+Saved Games/
+Searches/
+3D Objects/
+Biblioteca do calibre/
+Epic Games/
+NTUSER.DAT*
+ntuser.dat*
+ntuser.ini
+*.regtrans-ms
+*.TM.blf
+*.TMContainer*
+*.xml
+*.bat
+*.png
+*.md
+sakura_*
+mangas/
+full_page.png
+README.md
+README_SAKURA_DOWNLOADER.md
+.claude/
+.claude.json
+.cline/
+.config/
+.copilot/
+.dsh/
+.fcc/
+.gitconfig
+.headroom/
+.local/
+.vscode-shared/
+.vscode/
+"3D Objects"/
+"Biblioteca do calibre"/
+"Epic Games"/
+"Saved Games"/

@@ -65,12 +65,14 @@ class HealthCheck:
 
     def _log_report(self, report: HealthReport) -> None:
         """Log health report summary."""
+        ok = "[OK]"
+        fail = "[FAIL]"
         logger.info("Health check complete:")
-        logger.info("  ADB Connected:        %s", "✓" if report.adb_connected else "✗")
-        logger.info("  BlueStacks Running:   %s", "✓" if report.bluestacks_running else "✗")
-        logger.info("  OneJev Reachable:     %s", "✓" if report.onejev_reachable else "✗")
-        logger.info("  Detector Loads:       %s", "✓" if report.detector_loads else "✗")
-        logger.info("  DirectML Available:   %s", "✓" if report.directml_available else "✗")
+        logger.info("  ADB Connected:        %s", ok if report.adb_connected else fail)
+        logger.info("  BlueStacks Running:   %s", ok if report.bluestacks_running else fail)
+        logger.info("  OneJev Reachable:     %s", ok if report.onejev_reachable else fail)
+        logger.info("  Detector Loads:       %s", ok if report.detector_loads else fail)
+        logger.info("  DirectML Available:   %s", ok if report.directml_available else fail)
         logger.info("  FPS Estimate:         %s", f"{report.fps_estimate:.1f}" if report.fps_estimate else "N/A")
 
     def _check_adb(self) -> bool:
@@ -116,6 +118,8 @@ class HealthCheck:
                 ["tasklist", "/FI", "IMAGENAME eq BlueStacks.exe"],
                 capture_output=True,
                 text=True,
+                encoding="cp1252",  # Windows default encoding
+                errors="replace",  # Replace undecodable bytes
                 timeout=self.timeout,
             )
             running = "BlueStacks.exe" in result.stdout

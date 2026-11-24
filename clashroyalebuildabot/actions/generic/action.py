@@ -16,6 +16,14 @@ class Action(ABC):
     def __repr__(self):
         return f"{self.CARD.name} at ({self.tile_x}, {self.tile_y})"
 
+    def can_execute(self, state):
+        """Check if action can be executed."""
+        return True
+
     @abstractmethod
     def calculate_score(self, state):
+        pass
+
+    def execute(self, state):
+        """Execute the action."""
         pass

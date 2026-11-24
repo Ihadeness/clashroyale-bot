@@ -47,6 +47,18 @@ class Unit:
         self.name = name
 
 
+class Action:
+    """Mock Action base class."""
+    def __init__(self, bot):
+        self.bot = bot
+
+    def can_execute(self, state: State) -> bool:
+        return True
+
+    def execute(self, state: State) -> None:
+        pass
+
+
 class Units:
     # 2.6 Hog Cycle units
     ARCHER = Unit("ARCHER")
