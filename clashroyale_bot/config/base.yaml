@@ -1,0 +1,50 @@
+# Base configuration extending original clashroyalebuildabot defaults
+# This file extends the original default_config.yaml and sets common overrides
+
+extends: "../../clashroyalebuildabot/default_config.yaml"
+
+# Override detector to use DirectML on Ryzen 5500U (Vega 7 iGPU)
+detector:
+  providers: ["DmlExecutionProvider", "CPUExecutionProvider"]
+
+# Enable collector by default
+collector:
+  enabled: true
+  output_dir: "data/"
+  rotate_daily: true
+  max_file_mb: 100
+  compress: true
+
+# Benchmark settings (disabled by default, enable with --bench)
+benchmark:
+  enabled: false
+  steps: 300
+  warmup: 50
+
+# Bot settings optimized for 2.6 cycle
+bot:
+  log_level: "INFO"
+  auto_start_game: true
+  play_action: 1.0
+
+# ADB settings
+adb:
+  device_serial: "emulator-5554"
+
+# Visuals - disable for performance
+visuals:
+  save_labels: false
+  save_images: false
+  show_images: false
+
+# Ingame settings
+ingame:
+  play_action: 1.0
+
+# Screen detector settings
+screen_detector:
+  base_url: "http://localhost:8000"
+  min_confidence: 0.5
+  interval: 1.0
+  max_age: 5.0
+  timeout: 10.0

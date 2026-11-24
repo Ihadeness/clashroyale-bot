@@ -1,0 +1,1 @@
+"""Minimal clashroyalebuildabot package for testing."""

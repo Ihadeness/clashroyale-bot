@@ -1,0 +1,71 @@
+# 2.6 Hog Cycle deck configuration
+# Extends base.yaml which extends original default_config.yaml
+
+extends: "base.yaml"
+
+deck:
+  name: "hog_26"
+  cards:
+    - "HOG_RIDER"
+    - "LOG"
+    - "ICE_SPIRIT"
+    - "SKELETONS"
+    - "ICE_GOLEM"
+    - "CANNON"
+    - "MUSKETEER"
+    - "FIREBALL"
+
+# Action-specific parameters for 2.6 Hog Cycle
+actions:
+  hog_rider:
+    bridge_tiles_x: [7, 10]  # Left/right bridge positions
+    bridge_tile_y: 13
+    punish_building_down: true
+
+  log:
+    radius: 3.5
+    target_swarms: true
+    chip_tower: true
+
+  ice_spirit:
+    cycle_cost: 1
+    kite_melee: true
+    stall_at_bridge: true
+
+  skeletons:
+    distract_single_target: true
+    kite: true
+    cycle_cost: 1
+
+  ice_golem:
+    tank_for: ["MUSKETEER"]
+    kite: true
+    death_nova_value: true
+
+  cannon:
+    reactive_defense: true
+    pull_targets: ["HOG_RIDER", "GIANT", "ROYAL_GIANT", "GOLEM"]
+
+  musketeer:
+    backline_dps: true
+    protect_with: ["ICE_GOLEM"]
+    punish_overcommit: true
+
+  fireball:
+    radius: 2.5
+    min_elixir_trade: 3
+    high_value_targets: ["WIZARD", "MUSKETEER", "WITCH", "EXECUTIONER", "ELITE_BARBARIAN"]
+
+# Collector settings (inherits from base, can override)
+collector:
+  enabled: true
+  output_dir: "data/hog_26/"
+  rotate_daily: true
+  max_file_mb: 100
+  compress: true
+
+# Benchmark settings
+benchmark:
+  enabled: false
+  steps: 300
+  warmup: 50

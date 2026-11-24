@@ -1,0 +1,30 @@
+# Default settings. Don't edit this file: updates will overwrite it.
+# To change a setting, put it in config.yaml in the project folder (the
+# GUI's "Save config to file" button creates it). You only need the settings
+# you want to change, for example:
+#
+# ingame:
+# play_action: 1.5
+
+bot:
+  log_level: "DEBUG"
+  load_deck: false
+  auto_start_game: false
+
+adb:
+  device_serial: "emulator-5554"
+
+visuals:
+  save_labels: false
+  save_images: false
+  show_images: false
+
+ingame:
+  play_action: 1
+
+screen_detector:
+  base_url: "http://localhost:8000"
+  min_confidence: 0.5
+  interval: 1.0
+  max_age: 5.0
+  timeout: 10.0

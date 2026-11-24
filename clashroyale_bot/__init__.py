@@ -1,0 +1,1 @@
+"""Clash Royale Bot - 2.6 Hog Cycle wrapper package."""
